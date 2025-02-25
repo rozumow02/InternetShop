@@ -32,7 +32,6 @@
 
 <script setup>
 import { Search, AlignJustify, X, MapPin, Heart, CircleUserRound, ShoppingBag, Globe } from 'lucide-vue-next'
-import Button from '@/components/ui/button'
 import Input from '@/components/UI/Input.vue'
 import CategoryMenu from '~/components/main/CategoryMenu.vue';
 import Container from '~/components/Container.vue';
