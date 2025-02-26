@@ -2,7 +2,8 @@
   <section class="space-y-6">
     <div class="flex items-center justify-between">
       <h2 class="text-2xl font-bold tracking-tight">{{ title }}</h2>
-      <UButton variant="outline" color="black" size="md">
+      <UButton :to="`/category${props.viewAllHref}`" variant="outline" color="black" size="md"
+        v-if="props.viewAllHref">
         <template #trailing>
           <UIcon name="i-heroicons-chevron-right" class="w-4 h-4" />
         </template>

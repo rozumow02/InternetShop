@@ -10,7 +10,7 @@ const slides = ref([image1, image1, image1, image1]);
 
 onMounted(() => {
   if (containerRef.value) {
-    containerRef.value.initialize();
+    // containerRef.value.initialize();
   }
 });
 </script>
@@ -23,8 +23,9 @@ onMounted(() => {
       :space-between="16"
       :pagination="true"
       :navigation="true"
-      :autoplay="{ delay: 3000 }"
-      class="w-full max-w-[100vw] lg:max-w-[90vw] xl:max-w-[1180px] mx-auto"
+      :autoplay="{ delay: 2000 }"
+      
+      class="[--swiper-theme-color:#F3F3F3] w-full max-w-[100vw] lg:max-w-[90vw] xl:max-w-[1180px] mx-auto"
     >
       <swiper-slide
         v-for="(slide, idx) in slides"
@@ -48,6 +49,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
 .swiper-container {
   width: 100%;
   overflow: hidden;
