@@ -1,21 +1,20 @@
 <script setup lang="ts">
 import { computed } from "vue"
-
+const localPath = useLocalePath()
 const navigation = {
   main: [
-    { name: "Главная", href: "/" },
-    { name: "О нас", href: "#" },
-    { name: "Возврат", href: "#" },
-    { name: "Доставка", href: "#" },
-    { name: "Связаться с нами", href: "#" },
+    { label: "О нас", link: "about" },
+    { label: "Возврат", link: "return" },
+    { label: "Доставка", link: "delivery" },
+    { label: "Связаться с нами", link: "contact" },
   ],
   categories: [
-    { name: "Распродажа", href: "#" },
-    { name: "Вода и напитки", href: "#" },
-    { name: "Сладкое", href: "#" },
-    { name: "Бакалея", href: "#" },
-    { name: "Для детей", href: "#" },
-    { name: "Новинки", href: "#" },
+    { name: "Распродажа", href: "rasprodazha" },
+    { name: "Вода и напитки", href: "voda-i-napitki" },
+    { name: "Сладкое", href: "sladkoe" },
+    { name: "Бакалея", href: "bakaleya" },
+    { name: "Для детей", href: "dlya-detej" },
+    { name: "Для дома", href: "dlya-doma" },
   ],
   social: [
     { name: "Instagram", href: "#" },
@@ -51,8 +50,8 @@ const currentYear = computed(() => new Date().getFullYear())
         <div class="space-y-4">
           <ul class="space-y-2">
             <li v-for="item in navigation.main" :key="item.name">
-              <NuxtLink :to="item.href" class="text-sm hover:text-white hover:underline">
-                {{ item.name }}
+              <NuxtLink :to="`/info/${item.link}`" class="text-sm hover:text-white hover:underline">
+                {{ item.label }}
               </NuxtLink>
             </li>
           </ul>
@@ -62,7 +61,8 @@ const currentYear = computed(() => new Date().getFullYear())
         <div class="space-y-4">
           <ul class="space-y-2">
             <li v-for="item in navigation.categories" :key="item.name">
-              <NuxtLink :to="item.href" class="text-sm hover:text-white hover:underline">
+              <NuxtLink :to="localPath({ name: 'category-categorySlug', params: { categorySlug: item.href } })"
+                class="text-sm hover:text-white hover:underline">
                 {{ item.name }}
               </NuxtLink>
             </li>

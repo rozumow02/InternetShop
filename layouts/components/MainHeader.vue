@@ -31,6 +31,7 @@
 </template>
 
 <script setup>
+const route = useRoute()
 import { Search, AlignJustify, X, MapPin, Heart, CircleUserRound, ShoppingBag, Globe } from 'lucide-vue-next'
 import Input from '@/components/UI/Input.vue'
 import CategoryMenu from '~/components/main/CategoryMenu.vue';
@@ -65,6 +66,9 @@ const clickIcon = (icon) => {
   console.log(isBasket.value, 'basket');
 
 }
+watch(() => route.path, (newPath) => {
+  isTrue.value = false
+})
 </script>
 
 <style scoped>
