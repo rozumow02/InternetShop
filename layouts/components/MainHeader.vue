@@ -2,7 +2,7 @@
   <header class="w-full border-b">
     <CategoryMenu v-if="isTrue" />
     <Container class="flex h-16 items-center justify-between gap-20">
-      <NuxtLink to="/" class="flex text-text-blue-1 items-center gap-2 font-bold text-xl text-primary">
+      <NuxtLink :to="localPath('/')" class="flex text-text-blue-1 items-center gap-2 font-bold text-xl text-primary">
         TradeLane
       </NuxtLink>
       <div class="flex w-full">
@@ -32,6 +32,8 @@
 
 <script setup>
 const route = useRoute()
+const router = useRouter()
+const localPath = useLocalePath()
 import { Search, AlignJustify, X, MapPin, Heart, CircleUserRound, ShoppingBag, Globe } from 'lucide-vue-next'
 import Input from '@/components/UI/Input.vue'
 import CategoryMenu from '~/components/main/CategoryMenu.vue';
@@ -49,21 +51,27 @@ const { isBasket } = storeToRefs(storeBasket)
 // Ikonalarni uzatishda komponentlar
 const icons = ref([
   { component: MapPin, label: 'Ашхабад' },
-  { component: Heart, label: 'Избранные' },
+  { component: Heart, label: 'Избранные', path: '/account/favorites' },
   { component: CircleUserRound, label: 'Аккаунт' },
   { component: ShoppingBag, label: 'Корзина' },
   { component: Globe, label: 'Русский' },
 ]);
 
 const clickIcon = (icon) => {
-  console.log(icon.label);
   if (icon.label == 'Аккаунт')
     dialog.value = true
 
 
   if (icon.label == 'Корзина')
     isBasket.value = true
-  console.log(isBasket.value, 'basket');
+
+  if (icon.label == 'Избранные') {
+
+    // localPath('/info/about')
+    router.push('/account/favorites')
+    console.log(icon.label);
+  }
+
 
 }
 watch(() => route.path, (newPath) => {

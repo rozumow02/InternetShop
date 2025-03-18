@@ -1,15 +1,27 @@
+<script setup lang="ts">
+import Input from '../UI/Input.vue';
+import Textarea from '../UI/Textarea.vue';
+
+</script>
+
 
 <template>
-    <div>
-        <h2 class="text-xl font-semibold mb-4">Связаться с нами</h2>
-        <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni mollitia, quod similique
-            fuga sint, repudiandae quaerat doloremque natus iste aspernatur earum obcaecati velit ea eligendi adipisci,
-            autem sequi. Minus, quasi cumque? </p>
-        <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni mollitia, quod similique
-            fuga sint, repudiandae quaerat doloremque natus iste aspernatur earum obcaecati velit ea eligendi adipisci,
-            autem sequi. Minus, quasi cumque? </p>
-        <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni mollitia, quod similique
-            fuga sint, repudiandae quaerat doloremque natus iste aspernatur earum obcaecati velit ea eligendi adipisci,
-            autem sequi. Minus, quasi cumque? </p>
+    <div class="grid grid-cols-2  gap-6">
+        <Input label="Имя" />
+        <Input label="Номер телефона" />
+        <Textarea label="Сообщение" />
+        <div class="gap-2 grid">
+            <Input type="email" label="Email" />
+            <UButton color="white" ripple block :ui="{
+                strategy: 'override',
+                color: {
+                    white: {
+                        solid: 'bg-main-blue text-white'
+                    },
+                }
+            }" size="lg">
+                Отправить
+            </UButton>
+        </div>
     </div>
 </template>

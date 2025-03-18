@@ -14,7 +14,6 @@ const fetchFilter = (filters: { order: string; brands: string[]; searchQuery: st
 }
 const onClear = () => {
     console.log('ff');
-
 }
 
 
@@ -24,96 +23,112 @@ const initialProducts = ref<IProduct[]>([
         name: "Французские духи Chanel №5 (50мл)",
         price: 3000,
         imageUrl: image1,
+        quantity: 10,
     },
     {
         id: 10,
         name: "Ювелирный набор - Серебряные украшения",
         price: 3500,
         imageUrl: image2,
+        quantity: 10,
     },
     {
         id: 11,
         name: "Набор сладостей Ferrero Rocher (200г)",
         price: 1100,
         imageUrl: image3,
+        quantity: 10,
     },
     {
         id: 12,
         name: "Косметический набор L’Oreal",
         price: 1800,
         imageUrl: image4,
+        quantity: 10,
     },
     {
         id: 9,
         name: "Французские духи Chanel №5 (50мл)",
         price: 3000,
         imageUrl: image1,
+        quantity: 10,
     },
     {
         id: 10,
         name: "Ювелирный набор - Серебряные украшения",
         price: 3500,
         imageUrl: image2,
+        quantity: 10,
     },
     {
         id: 11,
         name: "Набор сладостей Ferrero Rocher (200г)",
         price: 1100,
         imageUrl: image3,
+        quantity: 10,
     },
     {
         id: 12,
         name: "Косметический набор L’Oreal",
         price: 1800,
         imageUrl: image4,
+        quantity: 10,
     },
     {
         id: 9,
         name: "Французские духи Chanel №5 (50мл)",
         price: 3000,
         imageUrl: image1,
+        quantity: 10,
     },
     {
         id: 10,
         name: "Ювелирный набор - Серебряные украшения",
         price: 3500,
         imageUrl: image2,
+        quantity: 10,
     },
     {
         id: 11,
         name: "Набор сладостей Ferrero Rocher (200г)",
         price: 1100,
         imageUrl: image3,
+        quantity: 10,
     },
     {
         id: 12,
         name: "Косметический набор L’Oreal",
         price: 1800,
         imageUrl: image4,
+        quantity: 10,
     },
     {
         id: 9,
         name: "Французские духи Chanel №5 (50мл)",
         price: 3000,
         imageUrl: image1,
+        quantity: 10,
     },
     {
         id: 10,
         name: "Ювелирный набор - Серебряные украшения",
         price: 3500,
         imageUrl: image2,
+        quantity: 10,
     },
     {
         id: 11,
         name: "Набор сладостей Ferrero Rocher (200г)",
         price: 1100,
         imageUrl: image3,
+        quantity: 10,
     },
     {
         id: 12,
         name: "Косметический набор L’Oreal",
         price: 1800,
         imageUrl: image4,
+        quantity: 10,
     },
 ]);
 
@@ -134,15 +149,12 @@ const route = useRoute()
 // Sahifa yuklanganda yoki yangilanganda array ni tasodifiy tartiblash
 onBeforeMount(() => {
     popularProducts.value = shuffleArray([...initialProducts.value]);
-    console.log('aaaaa',);
-
 });
 </script>
 
 <template>
     <Container class="my-5">
-        <div class="flex gap-6">
-
+        <div class="flex gap-4">
             <ProductFilter @clear="onClear" @apply="fetchFilter" />
             <ProductGrid :products="popularProducts" />
         </div>

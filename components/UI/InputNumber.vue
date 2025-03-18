@@ -9,7 +9,8 @@ interface InputNumberProps {
     disabled?: boolean
     controls?: boolean
     color?: string
-    size?: 'sm' | 'md' | 'lg'
+    size?: 'small' | 'large'
+    myclass?: string
 }
 
 const model = defineModel<number>({ required: true })
@@ -20,7 +21,7 @@ defineEmits(['change', 'focus', 'blur'])
 </script>
 
 <template>
-    <VueNumberInput v-model="model" center :min="min" :max="max" :step="step" :precision="precision" controls
-        :disabled="disabled" class="w-full text-center border-0 outline-none" :class="[]"
+    <VueNumberInput v-model="model" center :min="min" :max="max" :step="step" :precision="precision" :size="size"
+         controls :disabled="disabled" class="w-full text-center border-0 outline-none" :class="[myclass, color]"
         @change="$emit('change', model)" @focus="$emit('focus', $event)" @blur="$emit('blur', $event)" />
 </template>
