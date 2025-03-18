@@ -5,4 +5,5 @@ export interface IProduct {
     originalPrice?: number
     imageUrl: string
     isNew?: boolean
+    quantity: number;
 }
