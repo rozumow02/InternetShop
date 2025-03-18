@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "nuxt-swiper",
     "nuxt-lucide-icons",
     "@nuxt/ui",
+    "@vueuse/nuxt",
   ],
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
