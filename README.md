@@ -1,75 +1,87 @@
-# Nuxt Minimal Starter
+# InternetShop
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A modern, responsive e-commerce web application built with Nuxt 3, Pinia, and Tailwind CSS. InternetShop provides a seamless online shopping experience with features like product catalog, shopping basket, user authentication, localization, and a clean, mobile-friendly UI.
 
-## Setup
+## Features
 
-Make sure to install dependencies:
+- 🛒 Product catalog with categories and product details
+- 🧺 Shopping basket with add/remove and quantity management
+- 👤 User authentication (login, profile, favorites, orders)
+- 🌐 Multi-language support (English, Russian, Turkmen)
+- 🔍 Product search and filtering
+- 📱 Responsive design for mobile and desktop
+- ⚡ Fast performance with Nuxt 3 and Vue 3
+- 🎨 Modern UI with Tailwind CSS
+
+## Technologies Used
+
+- [Nuxt 3](https://nuxt.com/) (Vue 3 framework)
+- [Pinia](https://pinia.vuejs.org/) (state management)
+- [Tailwind CSS](https://tailwindcss.com/) (utility-first CSS)
+- TypeScript
+- i18n (localization)
+- Vite (build tool)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16+ recommended)
+- npm or yarn
+
+### Installation
 
 ```bash
-# npm
+git clone https://github.com/rozumow02/InternetShop.git
+cd InternetShop
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
+# or
 yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### Running the Development Server
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
+# or
 yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+The app will be available at [http://localhost:3000](http://localhost:3000).
 
-Build the application for production:
+### Building for Production
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
+npm run start
+# or
 yarn build
-
-# bun
-bun run build
+yarn start
 ```
 
-Locally preview production build:
+## Project Structure
 
-```bash
-# npm
-npm run preview
+- `components/` – Reusable Vue components (UI, Modal, Card, etc.)
+- `pages/` – Application pages (home, basket, account, product, etc.)
+- `stores/` – Pinia stores for state management (auth, basket, menu)
+- `assets/` – Static assets (images, CSS)
+- `i18n/` – Localization files
+- `layouts/` – Application layouts (header, footer)
+- `types/` – TypeScript types
 
-# pnpm
-pnpm preview
+## Screenshots
 
-# yarn
-yarn preview
+<!-- Add screenshots here if available -->
+<!-- ![Home Page](assets/images/screenshot-home.png) -->
 
-# bun
-bun run preview
-```
+## Contributing
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions or feedback, please contact azamatrozumow@gmail.com
