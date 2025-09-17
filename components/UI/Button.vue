@@ -44,7 +44,7 @@
       case 'destructive':
         return 'bg-destructive text-destructive-foreground hover:bg-destructive/90';
       case 'ghost':
-        return 'hover:bg-accent hover:text-accent-foreground';
+        return 'hover:bg-gray-100 hover:text-accent-foreground';
       default:
         return 'bg-primary text-primary-foreground hover:bg-primary/90';
     }

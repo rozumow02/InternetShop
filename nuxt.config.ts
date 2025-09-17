@@ -21,10 +21,6 @@ export default defineNuxtConfig({
     defaultLocale: "ru",
     strategy: "prefix_and_default",
   },
-  
-  colorMode: {
-    preference: "light"
-  },
   // postcss: {
   //   plugins: {
   //     // 'postcss-color-gray': {}

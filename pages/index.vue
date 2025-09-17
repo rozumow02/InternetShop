@@ -15,6 +15,7 @@ const saleProducts = ref<IProduct[]>([
   {
     id: 1,
     name: "Raffaello - Праздничный набор конфет (240г)",
+    quantity: 20,
     originalPrice: 500,
     price: 450,
     imageUrl: image1,
@@ -22,6 +23,7 @@ const saleProducts = ref<IProduct[]>([
   },
   {
     id: 2,
+    quantity: 15,
     name: "Французский парфюм - Для женщин (50мл)",
     originalPrice: 1200,
     price: 900,
@@ -29,6 +31,7 @@ const saleProducts = ref<IProduct[]>([
   },
   {
     id: 3,
+    quantity: 10, 
     name: "Ювелирное украшение - Серебряное кольцо",
     originalPrice: 2500,
     price: 1900,
@@ -36,6 +39,7 @@ const saleProducts = ref<IProduct[]>([
   },
   {
     id: 4,
+    quantity: 5,
     name: "Набор сладостей - Шоколад и конфеты",
     originalPrice: 800,
     price: 600,
@@ -46,53 +50,30 @@ const saleProducts = ref<IProduct[]>([
 const recommendedProducts = ref<IProduct[]>([
   {
     id: 5,
+    quantity: 25,
     name: "Букет цветов - Премиум розы",
     price: 1500,
     imageUrl: image1,
   },
   {
     id: 6,
+    quantity: 30,
     name: "Набор натуральной косметики",
     price: 1000,
     imageUrl: image2,
   },
   {
     id: 7,
+    quantity: 18,
     name: "Женские духи - Dior J’adore (50мл)",
     price: 2200,
     imageUrl: image3,
   },
   {
     id: 8,
+    quantity: 12, 
     name: "Шоколадный набор - Лучший подарок",
     price: 850,
-    imageUrl: image4,
-  },
-]);
-
-const popularProducts = ref<IProduct[]>([
-  {
-    id: 9,
-    name: "Французские духи Chanel №5 (50мл)",
-    price: 3000,
-    imageUrl: image1,
-  },
-  {
-    id: 10,
-    name: "Ювелирный набор - Серебряные украшения",
-    price: 3500,
-    imageUrl: image2,
-  },
-  {
-    id: 11,
-    name: "Набор сладостей Ferrero Rocher (200г)",
-    price: 1100,
-    imageUrl: image3,
-  },
-  {
-    id: 12,
-    name: "Косметический набор L’Oreal",
-    price: 1800,
     imageUrl: image4,
   },
 ]);
@@ -100,6 +81,7 @@ const popularProducts = ref<IProduct[]>([
 const newProducts = ref<IProduct[]>([
   {
     id: 13,
+    quantity: 40,
     name: "Парфюмерная вода Gucci Bloom (50мл)",
     price: 2500,
     imageUrl: image1,
@@ -107,6 +89,7 @@ const newProducts = ref<IProduct[]>([
   },
   {
     id: 14,
+    quantity: 22,
     name: "Ювелирное украшение - Золотая подвеска",
     price: 5000,
     imageUrl: image2,
@@ -114,6 +97,7 @@ const newProducts = ref<IProduct[]>([
   },
   {
     id: 15,
+    quantity: 28,
     name: "Натуральный уход за кожей - SPA набор",
     price: 2000,
     imageUrl: image3,
@@ -121,6 +105,7 @@ const newProducts = ref<IProduct[]>([
   },
   {
     id: 16,
+    quantity: 16,
     name: "Романтический ужин - Сертификат в ресторан",
     price: 3000,
     imageUrl: image4,
@@ -131,6 +116,7 @@ const newProducts = ref<IProduct[]>([
 const mart_8 = ref<IProduct[]>([
   {
     id: 17,
+    quantity: 50,
     name: "Raffaello - Праздничный набор конфет (240г)",
     originalPrice: 500,
     price: 450,
@@ -139,18 +125,21 @@ const mart_8 = ref<IProduct[]>([
   },
   {
     id: 18,
+    quantity: 35,
     name: "Букет цветов - Специально к 8 Марта",
     price: 300,
     imageUrl: image2,
   },
   {
     id: 19,
+    quantity:5,
     name: "Французский парфюм - Для женщин (50мл)",
     price: 1200,
     imageUrl: image3,
   },
   {
     id: 20,
+    quantity: 8,
     name: "Набор сладостей - Шоколад и конфеты",
     price: 750,
     imageUrl: image4,

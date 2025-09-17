@@ -3,7 +3,7 @@
     <CategoryMenu v-if="isTrue" />
     <Container class="flex h-16 items-center justify-between gap-20">
       <NuxtLink :to="localPath('/')" class="flex text-text-blue-1 items-center gap-2 font-bold text-xl text-primary">
-        TradeLane
+        Internet Shop
       </NuxtLink>
       <div class="flex w-full">
         <button variant="destructive"

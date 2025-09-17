@@ -8,37 +8,7 @@ import type { IProduct } from "@/types";
 export const useBasketStore = defineStore("basket", {
   state: () => ({
     isBasket: false,
-    items: [
-      {
-        id: 1,
-        name: "Ноутбук Lenovo",
-        price: 75000,
-        quantity: 1,
-        imageUrl: image1, // Import qilingan rasm
-      },
-      {
-        id: 2,
-        name: "Смартфон Samsung",
-        price: 50000,
-        quantity: 2,
-        imageUrl: image2,
-      },
-      {
-        id: 3,
-        name: "Беспроводные наушники",
-        price: 15000,
-        quantity: 1,
-        imageUrl: image3,
-      },
-      {
-        id: 4,
-        name: "Набор сладостей - Шоколад и конфеты",
-        originalPrice: 800, // Chegirma oldingi narx
-        price: 600,
-        quantity: 1,
-        imageUrl: image4,
-      },
-    ] as IProduct[],
+    items: [] as IProduct[],
   }),
   actions: {
     addToBasket(product: IProduct) {

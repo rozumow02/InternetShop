@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia"
 import Input from "../UI/Input.vue";
-import MyInput from "../UI/myInput.vue";
 const storeAuth = useAuthStore()
 const { dialog } = storeToRefs(storeAuth)
 const selected = ref(true)
